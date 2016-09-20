@@ -95,6 +95,21 @@ class BloxorzSuite extends FunSuite {
     }
   }
 
+	test("from") {
+    new Level1 {
+      val initial = (startBlock, Nil) #:: Stream.empty
+      (from(initial, Nil toSet) take 100 toList) foreach println _
+    }
+  }
+
+	test("pathsToGoal") {
+    new Level1 {
+      Console println "Solutions"
+      val initial = (startBlock, Nil) #:: Stream.empty
+      (pathsToGoal take 100 toList) foreach println _
+    }
+  }
+
 	test("optimal solution for level 1") {
     new Level1 {
       assert(solve(solution) == Block(goal, goal))
