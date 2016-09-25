@@ -1,5 +1,6 @@
 /bin
 /target
 /project
+/web-ui/target
 .cache-main
 .cache-tests
